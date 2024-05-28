@@ -18,5 +18,8 @@
   "homepage": "https://github.com/ElGuilleDEV/Pruebapaquetes#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@elguilledev/pruebapaquetes": "^0.1.1"
   }
 }
