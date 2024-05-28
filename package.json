@@ -1,6 +1,6 @@
 {
-  "name": "@svsm/plugins",
-  "version": "0.0.1",
+  "name": "@elguilledev/pruebapaquetes",
+  "version": "0.1.1",
   "description": "Paquete contenedor de aquellos creados por SVSM",
   "main": "src/index.js",
   "scripts": {
