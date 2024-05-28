@@ -1,6 +1,6 @@
 {
   "name": "@elguilledev/pruebapaquetes",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Paquete contenedor de aquellos creados por SVSM",
   "main": "src/index.js",
   "scripts": {
@@ -18,8 +18,5 @@
   "homepage": "https://github.com/ElGuilleDEV/Pruebapaquetes#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
-  },
-  "dependencies": {
-    "@elguilledev/pruebapaquetes": "^0.1.1"
   }
 }
