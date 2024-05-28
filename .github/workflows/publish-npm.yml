@@ -29,7 +29,7 @@ jobs:
       - name: Login to npm
         run:
           npm login --scope=@elguilledev --auth-type=legacy --registry=https://npm.pkg.github.com <<EOF
-          ${{ USERNAME }}
+          ${{ secrets.USERNAME }}
           ${{ secrets.AUTH_GITHUB_TOKEN}}
           EOF
 
