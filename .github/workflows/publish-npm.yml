@@ -28,9 +28,9 @@ jobs:
 
       - name: Autenticarse con el registro de npm
         run: |
-          echo "@elguilledev:registry=https://npm.pkg.github.com/"> ~/.npmrc
-          echo "npm.pkg.github.com/:_authToken=${{ secrets.AUTH_GITHUB_TOKEN }}" >> ~/.npmrc
-          cat .npmrc
+          echo "@elguilledev:registry=https://npm.pkg.github.com/"> ./.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.AUTH_GITHUB_TOKEN }}" >> ./.npmrc
+          cat ./.npmrc
 
       - name: Ejecutar npm install
         run: npm install
