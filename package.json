@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/ElGuilleDEV/PruebaPaquetes/issues"
   },
-  "homepage": "https://github.com/ElGuilleDEV/Pruebapaquetes#readme",
+  "homepage": "https://github.com/ElGuilleDEV/PruebaPaquetes#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   }
