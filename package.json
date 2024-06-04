@@ -1,6 +1,6 @@
 {
   "name": "@elguilledev/pruebapaquetes",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Paquete contenedor de aquellos creados por SVSM",
   "main": "src/index.js",
   "scripts": {

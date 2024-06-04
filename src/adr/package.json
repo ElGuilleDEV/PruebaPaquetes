@@ -1,14 +1,13 @@
 {
-  "name": "@elguilledev/adr",
-  "version": "1.0.0",
+  "name": "@pruebapaquetes/adr",
+  "version": "1.1.0",
   "engines": {
     "node": "18 || 20"
   },
-  "author": "elguille",
+  "author": "guille",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "homepage": "https://github.com/ElGuilleDEV/PruebaPaquetes#readme",
   "scripts": {
     "tsc": "tsc",
     "tsc:full": "tsc --skipLibCheck false --incremental false",
@@ -26,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ElGuilleDev/PruebaPaquetes.git",
+    "url": "https://github.com/elguilledev/pruebaPaquetes.git",
     "directory": "paquetes/adr"
   },
   "devDependencies": {

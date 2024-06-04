@@ -3,7 +3,7 @@ name: Publish to NPM
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   publish:
@@ -23,22 +23,20 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          registry-url: 'https://npm.pkg.github.com'
+          node-version: 20
 
-      - name: Autenticarse con el registro de npm
+      - name: Autenticarse con el registro de Github Packages
         run: |
-          echo "@elguilledev:registry=https://npm.pkg.github.com/"> ./.npmrc
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.AUTH_GITHUB_TOKEN }}" >> ./.npmrc
-          cat ./.npmrc
-
-      - name: Ejecutar npm install
-        run: npm install
-
-      - name: Install dependencies
-        run: npm ci
+          echo 'npmRegistries:' >> ./.yarnrc.yml 
+          echo ' "https://npm.pkg.github.com":' >> ./.yarnrc.yml 
+          echo '    npmAuthToken: "${{ secrets.AUTH_GITHUB_TOKEN }}"' >> ./.yarnrc.yml 
+          echo 'npmScopes:' >> ./.yarnrc.yml 
+          echo '  elguilledev:' >> ./.yarnrc.yml 
+          echo '    npmRegistryServer: "https://npm.pkg.github.com"' >> ./.yarnrc.yml
+          cat ./.yarnrc.yml
 
       - name: Publish to NPM
-        run: npm publish --access private
-        env:
-          NODE_AUTH_TOKEN: ${{ steps.generate-token.outputs.token }}
+        run: |
+          yarn workspaces foreach --all -v npm publish --access restricted --tag latest
+        env: 
+          NODE_AUTH_TOKEN: ${{ secrets.AUTH_GITHUB_TOKEN }}
