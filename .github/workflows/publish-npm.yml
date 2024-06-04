@@ -23,8 +23,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '18'
+          registry-url: 'https://npm.pkg.github.com'
 
+      - name: Set up Yarn 4
+        run: |
+          yarn set version berry
+          
       - name: Autenticarse con el registro de Github Packages
         run: |
           echo 'npmRegistries:' >> ./.yarnrc.yml 
