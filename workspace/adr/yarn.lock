@@ -4687,9 +4687,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pruebapaquetes/adr@workspace:workspace/adr":
+"@pruebapaquetes/adr@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@pruebapaquetes/adr@workspace:workspace/adr"
+  resolution: "@pruebapaquetes/adr@workspace:."
   dependencies:
     "@backstage/cli": "npm:^0.26.5"
     "@backstage/e2e-test-utils": "npm:^0.1.1"
@@ -16974,12 +16974,6 @@ __metadata:
   checksum: 10c0/fe7dd8b1bdbbbea18d1459107729c3e4a2243ca870d26d34c2c1bcd3e4425b7bcc5112362df2d93cc7fb9746f6142b5e272fd1cc5c86ddf8580175186f6ad42b
   languageName: node
   linkType: hard
-
-"pruebapaquetes@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "pruebapaquetes@workspace:."
-  languageName: unknown
-  linkType: soft
 
 "pseudomap@npm:^1.0.2":
   version: 1.0.2
